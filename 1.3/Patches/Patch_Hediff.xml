@@ -1,5 +1,12 @@
 <Patch>
 
+    <Operation Class="PatchOperationReplace">
+      <xpath>/Defs/HediffDef [defName = "FoodPoisoning"]/description</xpath>
+      <value>
+          <description>Gastrointestinal illness caused by consuming decayed or unclean food. It can be caused by eating rotten food, by incompetent cooks accidentally poisoning meals, or by eating from unsafe wild sources. This type of food poisoning has beencaused by eating an infected food and it needs to be tended in order to grant immunity before it eventually kills the patient.</description>
+      </value>
+    </Operation>
+
     <Operation Class="PatchOperationAdd">
         <xpath>/Defs/HediffDef [defName = "FoodPoisoning"]</xpath>
         <value>

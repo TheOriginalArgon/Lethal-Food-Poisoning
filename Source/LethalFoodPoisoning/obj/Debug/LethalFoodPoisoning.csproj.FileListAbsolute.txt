@@ -1,0 +1,5 @@
+D:\Proyectos y Archivos Guardados\Rimworld\Mod Packages\Lethal food poisoning\1.3\Assemblies\LethalFoodPoisoning.dll
+D:\Proyectos y Archivos Guardados\Rimworld\Mod Packages\Lethal food poisoning\Source\LethalFoodPoisoning\obj\Debug\LethalFoodPoisoning.csproj.AssemblyReference.cache
+D:\Proyectos y Archivos Guardados\Rimworld\Mod Packages\Lethal food poisoning\Source\LethalFoodPoisoning\obj\Debug\LethalFoodPoisoning.csproj.CoreCompileInputs.cache
+D:\Proyectos y Archivos Guardados\Rimworld\Mod Packages\Lethal food poisoning\Source\LethalFoodPoisoning\obj\Debug\LethalFoodPoisoning.dll
+D:\Proyectos y Archivos Guardados\Rimworld\Mod Packages\Lethal food poisoning\Source\LethalFoodPoisoning\obj\Debug\LethalFoodPoisoning.csproj.CopyComplete
