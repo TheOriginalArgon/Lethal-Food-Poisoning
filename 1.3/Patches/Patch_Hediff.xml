@@ -23,7 +23,7 @@
                   <severityPerDayTended>-0.0765</severityPerDayTended>
                 </li>
                 <li Class="HediffCompProperties_Immunizable">
-                  <severityPerDayNotImmune>0.2766</severityPerDayNotImmune>
+                  <severityPerDayNotImmune>0.2266</severityPerDayNotImmune>
                   <immunityPerDaySick>0.2766</immunityPerDaySick>
                   <severityPerDayImmune>-0.4832</severityPerDayImmune>
                   <immunityPerDayNotSick>-0.05</immunityPerDayNotSick>
