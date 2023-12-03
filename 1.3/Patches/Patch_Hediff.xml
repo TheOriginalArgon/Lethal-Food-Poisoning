@@ -1,0 +1,83 @@
+<Patch>
+
+    <Operation Class="PatchOperationReplace">
+      <xpath>/Defs/HediffDef [defName = "FoodPoisoning"]/description</xpath>
+      <value>
+          <description>Gastrointestinal illness caused by consuming decayed or unclean food. It can be caused by eating rotten food, by incompetent cooks accidentally poisoning meals, or by eating from unsafe wild sources. This type of food poisoning has beencaused by eating an infected food and it needs to be tended in order to grant immunity before it eventually kills the patient.</description>
+      </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/HediffDef [defName = "FoodPoisoning"]</xpath>
+        <value>
+            <tendable>true</tendable>
+            <lethalSeverity>1</lethalSeverity>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/HediffDef [defName = "FoodPoisoning"]/comps</xpath>
+        <value>
+                <li Class="HediffCompProperties_TendDuration">
+                  <baseTendDurationHours>12</baseTendDurationHours>
+                  <severityPerDayTended>-0.0765</severityPerDayTended>
+                </li>
+                <li Class="HediffCompProperties_Immunizable">
+                  <severityPerDayNotImmune>0.2266</severityPerDayNotImmune>
+                  <immunityPerDaySick>0.2766</immunityPerDaySick>
+                  <severityPerDayImmune>-0.4832</severityPerDayImmune>
+                  <immunityPerDayNotSick>-0.05</immunityPerDayNotSick>
+                </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationRemove">
+        <xpath>/Defs/HediffDef [defName = "FoodPoisoning"]/comps/li [@Class = "HediffCompProperties_SeverityPerDay"]</xpath>
+    </Operation>
+
+    <Operation Class="PatchOperationRemove">
+        <xpath>/Defs/HediffDef [defName = "FoodPoisoning"]/initialSeverity</xpath>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/HediffDef [defName = "FoodPoisoning"]/stages/li [1]/label</xpath>
+        <value>
+            <label>initial</label>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/HediffDef [defName = "FoodPoisoning"]/stages/li [3]</xpath>
+        <value>
+            <li>
+                <label>extreme</label>
+                <minSeverity>0.8</minSeverity>
+                <vomitMtbDays>0.2</vomitMtbDays>
+                <painOffset>0.4</painOffset>
+                <capMods>
+                  <li>
+                    <capacity>Consciousness</capacity>
+                    <postFactor>0.5</postFactor>
+                  </li>
+                  <li>
+                    <capacity>Moving</capacity>
+                    <postFactor>0.35</postFactor>
+                  </li>
+                  <li>
+                    <capacity>Manipulation</capacity>
+                    <postFactor>0.5</postFactor>
+                  </li>
+                  <li>
+                    <capacity>BloodFiltration</capacity>
+                    <postFactor>0.75</postFactor>
+                  </li>
+                  <li>
+                    <capacity>Eating</capacity>
+                    <postFactor>0.25</postFactor>
+                  </li>
+                </capMods>
+              </li>
+        </value>
+    </Operation>
+
+</Patch>
